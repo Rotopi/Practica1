@@ -1,0 +1,38 @@
+<h2>
+  Listado Personas
+</h2>
+
+
+<div *ngIf="! clientes.length">No hay clientes por el momento</div>
+<div class="">
+  <article >
+      <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido Paterno</th>
+              <th scope="col">Apellido Materno</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Sexo </th>
+              <th scope="col"> Icono</th>
+            
+
+            </tr>
+          </thead>
+          <tbody>
+<tr *ngFor="let cliente of clientes">
+    <td>{{cliente.nombre}}</td>
+    <td>{{cliente.apellidoP}}</td>
+    <td>{{cliente.apellidoM}}</td>
+    <td>{{cliente.correo}}</td>
+    <td>{{cliente.edad}}</td>
+    <td>{{cliente.sexo}}</td>
+    <td class="{{cliente.icono}}"></td>
+</tr>
+</tbody>
+ 
+    
+
+
+
